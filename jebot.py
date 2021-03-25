@@ -27,10 +27,10 @@ async def start(client, message):
    if message.chat.type == 'private':
        await Jebot.send_message(
                chat_id=message.chat.id,
-               text="""<b>Hey There,</b> 
-I'm **All In One Downloader Bot** 
+               text="""<b>Hey There, 
+I'm All In One Downloader Bot!</b> 
 
-<i>I Can Download **Video or Audio** From YouTube & Other Sites As Well. Hit **Help** Button To Find Out More About How To Use Me!</i>""",   
+<i>I Can Download Video or Audio From YouTube & Other Sites As Well. Hit Help Button To Find Out More About How To Use Me!!</i>""",   
                             reply_markup=InlineKeyboardMarkup(
                                 [[
                                         InlineKeyboardButton(
@@ -47,7 +47,7 @@ async def help(client, message):
     if message.chat.type == 'private':   
         await Jebot.send_message(
                chat_id=message.chat.id,
-               text="""<b>💁🏻‍♂️ Help!
+               text="""<b>💁🏻‍♂️ Help:
 
 Just Send Any Youtube or Other Sites URL To Download It In Video or Audio Format!
 
@@ -55,7 +55,7 @@ Just Send Any Youtube or Other Sites URL To Download It In Video or Audio Format
         reply_markup=InlineKeyboardMarkup(
                                 [[
                                         InlineKeyboardButton(
-                                            "🔙 Back", callback_data="start"),
+                                            "◀️ Back", callback_data="start"),
                                         InlineKeyboardButton(
                                             "About 🧑‍💻", callback_data="about"),
                                   ],[
@@ -71,11 +71,11 @@ async def about(client, message):
     if message.chat.type == 'private':   
         await Jebot.send_message(
                chat_id=message.chat.id,
-               text="""<b>🧑‍💻 Developer!</b>
+               text="""<b>🧑‍💻 About:</b>
 
 <b>♞ Name:</b> <a href="https://t.me/I_Am_Only_One_1">Safone</a>
 
-<b>♞ Support:</b> <a href="https://t.me/safothebot">Bot Group</a>
+<b>♞ Support:</b> <a href="https://t.me/safothebot">Group</a>
 
 <b>♞ Library:</b> <a href="https://github.com/pyrogram/pyrogram">Pyrogram</a>
 
