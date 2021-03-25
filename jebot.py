@@ -276,7 +276,6 @@ async def callback_query_forward_video(_, callback_query):
     m_cp = await m_edited.copy(CHANNEL_FORWARD_TO,
                                disable_notification=True)
     await callback_query.answer("Saved!")
-    await m_edited.reply(m_cp.link, quote=True)
 
 
 @Jebot.on_callback_query()
