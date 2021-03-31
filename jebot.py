@@ -30,15 +30,15 @@ async def start(client, message):
        await Jebot.send_message(
                chat_id=message.chat.id,
                text="""<b>Hey There, 
-I'm All In One Downloader Bot!</b> 
+I'm Pitarte!</b> 
 
 <i>I Can Download Video or Audio From YouTube & Other Sites As Well. Hit Help Button To Find Out More About How To Use Me!!</i>""",   
                             reply_markup=InlineKeyboardMarkup(
                                 [[
                                         InlineKeyboardButton(
-                                            "♻️ Help", callback_data="help"),
+                                            "🛠️ Help", callback_data="help"),
                                         InlineKeyboardButton(
-                                            "Group 💬", url="https://t.me/livedjmusic")
+                                            "Group 📣", url="https://t.me/rsrtginfo")
                                     ]]
                             ),        
             disable_web_page_preview=True,        
@@ -53,7 +53,7 @@ async def help(client, message):
 
 Just Send Any Youtube or Other Sites URL To Download It In Video or Audio Format!
 
-~ Enjoy Music @LiveDJMusic 🔥❤️</b>""",
+~ Enjoy Music @rsrtginfo 🔥❤️</b>""",
         reply_markup=InlineKeyboardMarkup(
                                 [[
                                         InlineKeyboardButton(
@@ -62,7 +62,7 @@ Just Send Any Youtube or Other Sites URL To Download It In Video or Audio Format
                                             "About 🧑‍💻", callback_data="about"),
                                   ],[
                                         InlineKeyboardButton(
-                                            "💠 Support Group 💠", url="https://t.me/safothebot")
+                                            "💠 Support Group 💠", url="https://t.me/rsrtginfo")
                                     ]]
                             ),        
             disable_web_page_preview=True,        
@@ -75,9 +75,9 @@ async def about(client, message):
                chat_id=message.chat.id,
                text="""<b>🧑‍💻 About:</b>
 
-<b>♞ Name:</b> <a href="https://t.me/I_Am_Only_One_1">Safone</a>
+<b>♞ Name:</b> <a href="https://t.me/Pitar_bot">Pitarte</a>
 
-<b>♞ Support:</b> <a href="https://t.me/safothebot">Group</a>
+<b>♞ Support:</b> <a href="https://t.me/rsrtginfo">Group</a>
 
 <b>♞ Library:</b> <a href="https://github.com/pyrogram/pyrogram">Pyrogram</a>
 
@@ -99,7 +99,7 @@ async def about(client, message):
                    & filters.regex(YTDL_REGEX))
 async def ytdl_with_button(_, message: Message):
     await message.reply_text(
-        "**Choose File Type To Download:**",
+        "**Choose File Type To Download🔭**",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -162,7 +162,7 @@ async def send_audio(message: Message, info_dict, audio_file):
         get_file_extension_from_url(thumbnail_url)
     # info (s2tw)
     webpage_url = info_dict['webpage_url']
-    title = '@OneDLbot - '+s2tw(info_dict['title'])
+    title = '@rsrtginfo - '+s2tw(info_dict['title'])
     caption = f"<b><a href=\"{webpage_url}\">{title}</a></b>"
     duration = int(float(info_dict['duration']))
     performer = s2tw(info_dict['uploader'])
@@ -213,7 +213,7 @@ async def send_video(message: Message, info_dict, video_file):
         get_file_extension_from_url(thumbnail_url)
     # info (s2tw)
     webpage_url = info_dict['webpage_url']
-    title = '@OneDLbot - '+s2tw(info_dict['title'])
+    title = '@rsrtginfo - '+s2tw(info_dict['title'])
     caption = f"<b><a href=\"{webpage_url}\">{title}</a></b>"
     duration = int(float(info_dict['duration']))
     width, height = get_resolution(info_dict)
@@ -225,12 +225,12 @@ async def send_video(message: Message, info_dict, video_file):
             [
                 [
                     InlineKeyboardButton(
-                        "✅ Save",
+                        "📥 Save",
                         callback_data="forward_video"
                     ),
                     InlineKeyboardButton(
-                        "Support 💬",
-                        url="https://t.me/safothebot"
+                        "Support 🔔",
+                        url="https://t.me/mizolibrary"
                     )
                 ]
             ]
